@@ -1,12 +1,22 @@
 from rectangle import Rectangle
+from square import Square
 
-def main():
-    shapes = [Rectangle(4, 5)]
+class Calculator:
+    def __init__(self):
+        self.shapes=[]
 
-    for shape in shapes:
-        print(shape)
-        print(shape.get_area())
-        print(shape.get_perimeter())
+    def add_shape(self,type_shape):
+        match type_shape:
+            case 'rectangle':
+                self.shapes.append(Rectangle(int(input('enter width: ')), int(input('enter height: '))))
+            case 'square':
+                self.shapes.append(Square(int(input('enter side: '))))
 
-if __name__ == '__main__':
-    main()
+
+    def disply_shaps(self):
+        for shape in self.shapes:
+            print(shape)
+            print(shape.get_area())
+            print(shape.get_perimeter())
+
+
