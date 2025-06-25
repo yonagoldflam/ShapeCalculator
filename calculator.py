@@ -1,6 +1,7 @@
 from rectangle import Rectangle
 from square import Square
 from  triangle import Triangle
+from circle import Circle
 
 class Calculator:
     def __init__(self):
@@ -14,12 +15,14 @@ class Calculator:
                 self.shapes.append(Square(float(input('enter side: '))))
             case 'triangle':
                 self.shapes.append(Triangle(float(input('enter first_side: ')), float(input('enter second_side: ')), float(input('enter third_side: '))))
+            case 'circle':
+                self.shapes.append(Circle(float(input('enter radius: '))))
 
 
     def disply_shaps(self):
         for shape in self.shapes:
             print(shape)
-            print(shape.get_area())
-            print(shape.get_perimeter())
+            print(f'area: {shape.get_area()}')
+            print(f'perimeter: {shape.get_perimeter()}')
 
 
