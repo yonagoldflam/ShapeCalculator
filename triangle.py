@@ -4,6 +4,8 @@ from shape import Shape
 
 class Triangle(Shape):
     def __init__(self,first_side,second_side,third_side):
+        if first_side <= 0 or second_side <= 0 or third_side <= 0:
+            raise ValueError("must be positive number")
         self.first_side = first_side
         self.second_side = second_side
         self.third_side = third_side

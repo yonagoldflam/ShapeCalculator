@@ -3,6 +3,8 @@ import math
 
 class Circle(Shape):
     def __init__(self,radius):
+        if radius <= 0:
+            raise ValueError("must be positive number")
         self.radius = radius
 
     def get_area(self):

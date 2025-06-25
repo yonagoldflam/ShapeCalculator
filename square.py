@@ -5,4 +5,4 @@ class Square(Rectangle):
         super().__init__(side,side)
 
     def __str__(self):
-        return f'Rectangle(side={self.width})'
+        return f'Square(side={self.width})'
